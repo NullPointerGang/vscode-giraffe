@@ -1,0 +1,61 @@
+{
+	"fileTypes": ["gf"],
+	"name": "Giraffe",
+	"scopeName": "source.giraffe",
+	"patterns": [
+	  {
+		"name": "comment.block.documentation.giraffe",
+		"begin": "/\\*",
+		"end": "\\*/",
+		"patterns": [
+		  {
+			"name": "comment.block.documentation.giraffe",
+			"match": ".+"
+		  }
+		]
+	  },
+	  {
+		"name": "comment.line.double-slash.giraffe",
+		"match": "//.*$"
+	  },
+	  {
+		"name": "keyword.control.giraffe",
+		"match": "\\b(const|func|var|if|elif|else|while|for|return)\\b"
+	  },
+	  {
+		"name": "storage.type.giraffe",
+		"match": "\\b(int|float|str|Null|list|dict)\\b"
+	  },
+	  {
+		"name": "variable.language.giraffe",
+		"match": "\\b(a|b|ops|users|user)\\b"
+	  },
+	  {
+		"name": "constant.numeric.giraffe",
+		"match": "\\b\\d+\\.\\d+|\\d+\\b"
+	  },
+	  {
+		"name": "string.quoted.double.giraffe",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "string.quoted.double.giraffe",
+			"match": ".*?"
+		  }
+		]
+	  },
+	  {
+		"name": "meta.function-call.giraffe",
+		"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\("
+	  },
+	  {
+		"name": "operator.giraffe",
+		"match": "\\b(=|\\+|\\-|\\*|\\/|==|<=|>=)\\b"
+	  },
+	  {
+		"name": "punctuation.separator.giraffe",
+		"match": "[(){}\\[\\],;]"
+	  }
+	]
+  }
