@@ -1,52 +1,75 @@
 {
+	"scopeName": "source.giraffe",
 	"patterns": [
-	  {
-		"name": "comment.block.documentation.giraffe",
-		"begin": "/\\*",
-		"end": "\\*/",
-		"patterns": [{ "name": "comment.block.documentation.giraffe", "match": ".*?" }]
-	  },
-	  {
-		"name": "comment.line.double-slash.giraffe",
-		"match": "//.*$"
-	  },
-	  {
-		"name": "storage.type.giraffe",
-		"match": "\\b(int|float|str|Null|list|dict|Option)\\b"
-	  },
-	  {
-		"name": "variable.language.giraffe",
-		"match": "\\b(a|b|ops|users|user)\\b"
-	  },
-	  {
-		"name": "constant.numeric.giraffe",
-		"match": "\\b\\d+\\.\\d+|\\d+\\b"
-	  },
-	  {
-		"name": "string.quoted.double.giraffe",
-		"begin": "\"",
-		"end": "\"",
-		"patterns": [{ "name": "string.quoted.double.giraffe", "match": ".*?" }]
-	  },
-	  {
-		"name": "meta.function.giraffe",
-		"match": "\\b(func|return|void)\\b"
-	  },
-	  {
-		"name": "keyword.operator.giraffe",
-		"match": "\\b(->)\\b"
-	  },
-	  {
-		"name": "meta.type.giraffe",
-		"match": "\\bOption\\[[a-zA-Z,\\s]*\\]$"
-	  },
-	  {
-		"name": "operator.giraffe",
-		"match": "\\b(=|\\+|\\-|\\*|\\/|==|<=|>=|=<|=\\>)\\b"
-	  },
-	  {
-		"name": "punctuation.separator.giraffe",
-		"match": "[(){}\\[\\],;]"
-	  }
+		{
+			"name": "comment.block.documentation.giraffe",
+			"begin": "/\\*",
+			"end": "\\*/",
+			"patterns": [
+				{
+					"name": "punctuation.definition.comment.giraffe",
+					"match": "\\*"
+				}
+			]
+		},
+		{
+			"name": "comment.line.double-slash.giraffe",
+			"match": "//.*$"
+		},
+		{
+			"name": "keyword.control.giraffe",
+			"match": "\\b(func|return|void|if|elif|else|while|for|var|try|handle)\\b"
+		},
+		{
+			"name": "keyword.operator.giraffe",
+			"match": "(==|<=|>=|!=|=|\\+|\\-|\\*|\\/|&&|\\|\\||!|->)"
+		},
+		{
+			"name": "storage.type.variable.cs.giraffe",
+			"match": "\\b(int|float|str|Null|list|dict|Option|bool|tuple|char)\\b"
+		},
+		{
+			"name": "variable.other.giraffe",
+			"match": "\\b(?!int|float|str|bool|Null|list|dict|Option)[a-zA-Z_][a-zA-Z0-9_]*\\b"
+		},
+		{
+			"name": "storage.modifier.giraffe",
+			"match": "\\b(const)\\b"
+		},
+		{
+			"name": "entity.name.function.giraffe",  
+			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\("
+		},
+		{
+			"name": "support.function.builtin.giraffe",
+			"match": "\\b(print|to_str)\\b"
+		},
+		{
+			"name": "constant.numeric.giraffe",
+			"match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+		},
+		{
+			"name": "punctuation.separator.giraffe",
+			"match": "[(){}\\[\\],;]"
+		},
+		{
+			"name": "string.quoted.double.giraffe",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.giraffe",
+					"match": "\\\\."
+				}
+			]
+		},
+		{
+			"name": "meta.function-call.giraffe",
+			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\(?"
+		},
+		{
+			"name": "meta.type.giraffe",
+			"match": "\\bOption\\[(?:[^\\[\\]]+|\\[(?:[^\\[\\]]+|\\[.*?\\])*\\])*\\]"
+		}
 	]
-  }
+}

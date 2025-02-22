@@ -2,8 +2,8 @@
   "name": "giraffe-syntax-highlighter",
   "displayName": "Giraffe Syntax",
   "description": "Code highlights for script based language Giraffe",
-  "version": "0.0.2",
-  "icon": "./images/icon-giraffe.png",
+  "version": "0.0.4",
+  "icon": "images/icon-giraffe.png",
   "publisher": "JellyTyan",
   "repository": {
     "type": "git",
