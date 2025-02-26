@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.1.0] - 2025-02-22
+### Added
+- Final version of Syntax Highlighter
+
 ## [0.0.5] - 2025-02-22
 ### Added
 - Detailed tags for syntax

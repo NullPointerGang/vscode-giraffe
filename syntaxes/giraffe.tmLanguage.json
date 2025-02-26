@@ -4,13 +4,7 @@
 		{
 			"name": "comment.block.documentation.giraffe",
 			"begin": "/\\*",
-			"end": "\\*/",
-			"patterns": [
-				{
-					"name": "punctuation.definition.comment.giraffe",
-					"match": "\\*"
-				}
-			]
+			"end": "\\*/"
 		},
 		{
 			"name": "comment.line.double-slash.giraffe",
@@ -21,28 +15,32 @@
 			"match": "\\b(func|return|void|if|elif|else|while|for|var|try|handle)\\b"
 		},
 		{
-			"name": "keyword.operator.giraffe",
-			"match": "(==|<=|>=|!=|=|\\+|\\-|\\*|\\/|&&|\\|\\||!|->)"
+			"name": "storage.modifier.cs.giraffe",
+			"match": "\\bconst\\b"
 		},
 		{
-			"name": "storage.type.variable.cs.giraffe",
+			"name": "storage.type.annotation.groovy.giraffe",
 			"match": "\\b(int|float|str|Null|list|dict|Option|bool|tuple|char)\\b"
 		},
 		{
-			"name": "variable.other.giraffe",
-			"match": "\\b(?!int|float|str|bool|Null|list|dict|Option)[a-zA-Z_][a-zA-Z0-9_]*\\b"
-		},
-		{
-			"name": "storage.modifier.giraffe",
-			"match": "\\b(const)\\b"
-		},
-		{
-			"name": "entity.name.function.giraffe",  
+			"name": "entity.name.function.giraffe",
 			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\("
 		},
 		{
 			"name": "support.function.builtin.giraffe",
 			"match": "\\b(print|to_str)\\b"
+		},
+		{
+			"name": "meta.function-call.giraffe",
+			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\("
+		},
+		{
+			"name": "variable.other.giraffe",
+			"match": "\\b(?!int|float|str|bool|Null|list|dict|Option|tuple|char)[a-zA-Z_][a-zA-Z0-9_]*\\b"
+		},
+		{
+			"name": "keyword.operator.giraffe",
+			"match": "(==|<=|>=|!=|=|\\+|\\-|\\*|\\/|&&|\\|\\||!|->)"
 		},
 		{
 			"name": "constant.numeric.giraffe",
@@ -64,12 +62,8 @@
 			]
 		},
 		{
-			"name": "meta.function-call.giraffe",
-			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\(?"
-		},
-		{
 			"name": "meta.type.giraffe",
-			"match": "\\bOption\\[(?:[^\\[\\]]+|\\[(?:[^\\[\\]]+|\\[.*?\\])*\\])*\\]"
+			"match": "\\bOption\\[(?:[^\\[\\]]|\\[(?:[^\\[\\]]|\\[.*?\\])*\\])*\\]"
 		}
 	]
 }
